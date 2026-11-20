@@ -1,0 +1,9 @@
+project: savantenvs/gbl_root_canoe
+target: fuzz_extractfv
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_extractfv/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz_extractfv
+    libfuzzer: true
+    timeout: 10

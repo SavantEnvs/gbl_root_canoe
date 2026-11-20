@@ -1,0 +1,9 @@
+project: savantenvs/gbl_root_canoe
+target: fuzz_sfb_pe_verify
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_sfb_pe_verify/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz_sfb_pe_verify
+    libfuzzer: true
+    timeout: 10

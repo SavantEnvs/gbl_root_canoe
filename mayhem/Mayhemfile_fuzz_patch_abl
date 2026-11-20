@@ -1,0 +1,9 @@
+project: savantenvs/gbl_root_canoe
+target: fuzz_patch_abl
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_patch_abl/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz_patch_abl
+    libfuzzer: true
+    timeout: 10
